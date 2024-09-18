@@ -3,6 +3,7 @@ services:
   tensorflow:
     build: .
     runtime: nvidia
+    restart: unless-stopped
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
